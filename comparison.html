@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width+device-width, initial-scale=1.0">
+    
+    <!--import in bootstrap dependency-->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+
+    <!--import popper js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <!--import bootswatch theme. see api: https://bootswatch.com/api/5.json-->
+    <link rel="stylesheet"
+    href="https://bootswatch.com/5/minty/bootstrap.css"
+    >
+    <style>
+      a:hover {
+      box-shadow: 0-3px #5cb85c;
+      }
+  </style>
+
+    <title>Weather Analysis</title>
+
+</head>
+
+<body>
+  
+ <!-- navbar -->
+ <nav class="navbar navbar-expand-md navbar-dark bg-info pt-5 pb-4">
+
+    <div class="container-xxl">
+      <!-- navbar brand / title -->
+      <a class="navbar-brand" href="index.html">
+        <span class="text-light fw-bold">
+          Home
+        </span>
+      </a>
+
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="#main-nav"
+       aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+
+                <a href="#" class="nav-link dropdown-toggle"
+                id="navbarDropdown" role ="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Plots
+                </a>
+
+                <ul class = "dropdown-menu" 
+                aria-labelledby="navbarDropdown">
+                    <li>
+                        <a href="temp.html" 
+                        class = "dropdown-item">
+                        Temperature</a>
+                    </li>
+
+                    <li>
+                        <a href="cloudiness.html" 
+                        class = "dropdown-item">
+                        Cloudiness</a>
+                    </li>
+
+                    <li>
+                        <a href="humidity.html" 
+                        class = "dropdown-item">
+                        Humidity</a>
+                    </li>
+
+                    <li>
+                      <a href="wind_speed.html" 
+                      class = "dropdown-item">
+                      Wind Speed</a>
+                  </li>
+                </ul>
+
+            </li>
+        
+            <li class="nav-item ms-2 d-none d-md-inline">
+                <a class="nav-link" href="comparison.html">Comparison</a>
+            </li>
+
+            <li class="nav-item ms-2 d-none d-md-inline">
+                <a class="nav-link" href="data.html">Data</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!--content/container-->
+
+<div class="container">
+  <div class="row">
+<!--no need to define sizes as these will take up the whole page-->      
+      <div class="box">
+        <!--margin on the top-->
+        <div class="row" style="padding-bottom: 30px;">
+        </div>
+
+        <!--title-->
+        <h3 class="title">Side-by-Side</h3>
+        <!--line break-->
+        <hr>
+        <div class="container">
+            <!--spacing-->
+            <div class="row" style="padding-bottom: 30px;">
+                <!--col 6 makes sure each one takes half of the container-->
+                <div class="col-6">
+                    <a href="temp.html">
+                      <img class="minipane" src="Resources/assets/Fig1.png" width="100%" height="auto" alt="Temperature Fig">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="humidity.html">
+                        <img class="minipane" src="Resources/assets/Fig2.png" width="100%" height="auto" alt="Humidity Fig">
+                    </a>
+                </div>
+            </div>
+            <!--new row for the second half of the graphs-->
+            <div class="row" style="padding-bottom: 30px;">
+                <div class="col-6">
+                    <a href="cloudiness.html">
+                        <img class="minipane" src="Resources/assets/Fig3.png" width="100%" height="auto" alt="Cloudiness Fig">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="wind_speed.html">
+                        <img class="minipane" src="Resources/assets/Fig4.png" width="100%" height="auto" alt="Wind Speed Fig">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
